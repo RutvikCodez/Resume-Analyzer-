@@ -24,9 +24,19 @@ type FooterLinksPropsType = {
   title: string
   type: string
   items: {
-    label: string,
-    href: string,
+    label: string
+    href: string
     icon?: SvgComponent
   }[]
+}
 
+type dashboardMenuItemsPropsType = {
+  icon?: SvgComponent
+  title: string
+  href: string
+  badge?: null | string
+}
+type dashboardMenuOpenCloseProps = {
+  open: boolean
+  setOpen: (open: boolean) => void
 }

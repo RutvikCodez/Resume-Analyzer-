@@ -4,13 +4,17 @@ import {
   Code2,
   FileText,
   Github,
+  HelpCircle,
+  LayoutDashboard,
   Linkedin,
   MessageSquare,
   Mic2,
+  Settings,
   Shield,
   Target,
   TrendingUp,
   Twitter,
+  User,
   Users,
 } from 'lucide-react'
 
@@ -198,3 +202,13 @@ export const footerLinksData: FooterLinksPropsType[] = [
     ],
   },
 ]
+
+export const dashboardMenuItems: dashboardMenuItemsPropsType[] = [
+    { icon: LayoutDashboard, title: "Dashboard", href: "/dashboard", badge: null },
+    { icon: FileText, title: "Resume Analysis", href: "/dashboard/resume", badge: "2" },
+    { icon: BarChart3, title: "Interview Pipeline", href: "/dashboard/pipeline", badge: null },
+    { icon: Target, title: "Skill Gap", href: "/dashboard/skills", badge: null },
+    { icon: User, title: "Profile", href: "/dashboard/profile", badge: null },
+    { icon: Settings, title: "Settings", href: "/dashboard/settings", badge: null },
+    { icon: HelpCircle, title: "Support", href: "/dashboard/support", badge: null },
+  ]
