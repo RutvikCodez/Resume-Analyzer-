@@ -9,7 +9,7 @@ const FAQHeader = () => {
 
       <h2 className='text-5xl md:text-6xl font-bold'>
         <span className='text-white'>Got </span>
-        <span className='bg-gradient-to-b from-white to-purple-400 bg-clip-text text-transparent'>
+        <span className='bg-linear-to-b from-white to-purple-400 bg-clip-text text-transparent'>
           Questions?
         </span>
       </h2>

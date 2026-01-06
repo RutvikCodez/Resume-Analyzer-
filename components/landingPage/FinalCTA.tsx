@@ -8,10 +8,10 @@ const FinalCTA = () => {
     <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       
       {/* Background Wash */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-purple-500/10 via-transparent to-transparent pointer-events-none" />
 
       {/* Central Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-purple-600/30 rounded-full blur-[200px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-225 bg-purple-600/30 rounded-full blur-[200px] pointer-events-none" />
 
       {/* Content */}
       <div className="relative max-w-4xl mx-auto text-center space-y-8">
@@ -19,7 +19,7 @@ const FinalCTA = () => {
         {/* Heading */}
         <h2 className="text-5xl md:text-7xl font-bold leading-tight text-white">
           Ready to{' '}
-          <span className="bg-gradient-to-b from-white to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.6)]">
+          <span className="bg-linear-to-b from-white to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.6)]">
             Crush
           </span>
           <br />
@@ -39,7 +39,7 @@ const FinalCTA = () => {
           <Button
             className="
               group px-12 py-6
-              bg-gradient-to-r from-purple-600 to-fuchsia-600
+              bg-linear-to-r from-purple-600 to-fuchsia-600
               text-white rounded-2xl font-bold text-xl
               shadow-[0_25px_80px_rgba(168,85,247,0.45)]
               hover:scale-[1.06]

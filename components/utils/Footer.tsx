@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="relative overflow-hidden">
       
       {/* Soft glow background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-purple-500/5 via-transparent to-transparent pointer-events-none" />
 
       <div className="relative bg-black/80 backdrop-blur border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -15,7 +15,7 @@ export function Footer() {
             
             {/* Brand */}
             <div>
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-b from-white to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+              <h3 className="text-2xl font-bold mb-4 bg-linear-to-b from-white to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">
                 InterviewAI
               </h3>
               <p className="text-sm text-white/70 leading-relaxed">

@@ -20,7 +20,7 @@ const InterviewTypesGrid = () => {
           "
         >
           {/* subtle glow */}
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-purple-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
           <div className="relative z-10 space-y-5">
             {/* Icon */}

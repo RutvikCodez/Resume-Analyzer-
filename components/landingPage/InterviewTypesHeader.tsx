@@ -14,7 +14,7 @@ const InterviewTypesHeader = () => {
       {/* Heading */}
       <h2 className="text-5xl md:text-6xl font-extrabold leading-tight">
         <span className="text-white">Master </span>
-        <span className="bg-gradient-to-b from-white to-purple-400 bg-clip-text text-transparent">
+        <span className="bg-linear-to-b from-white to-purple-400 bg-clip-text text-transparent">
           Every Round
         </span>
       </h2>
