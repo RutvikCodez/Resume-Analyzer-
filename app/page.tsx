@@ -3,6 +3,7 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import MockInterviewPlatform from "@/components/MockInterviewPlatform";
 import Problem from "@/components/Problem";
+import Process from "@/components/Process";
 import Solution from "@/components/Solution";
 
 const Page = () => {
@@ -14,6 +15,7 @@ const Page = () => {
       <Features />
       <AnalyzerDeepDive />
       <MockInterviewPlatform />
+      <Process />
     </div>
   );
 };

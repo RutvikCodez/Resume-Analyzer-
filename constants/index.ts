@@ -181,3 +181,34 @@ export const interviewFeatures: ProblemCardType[] = [
     desc: "Detailed actionable insights",
   },
 ];
+
+export const processSteps: StatsItemType[] = [
+  {
+    label: "Upload Resume",
+    value: "Share your resume—takes just 30 seconds",
+  },
+  {
+    label: "Get ATS Score",
+    value: "See how recruiters see your resume instantly",
+  },
+  {
+    label: "Improve Resume",
+    value: "Follow AI recommendations to optimize",
+  },
+  {
+    label: "Start Interviews",
+    value: "Practice with AI-powered mock interviews",
+  },
+  {
+    label: "Get Feedback",
+    value: "Detailed analysis on every answer",
+  },
+  {
+    label: "Track Progress",
+    value: "Watch your confidence grow",
+  },
+  {
+    label: "Apply Confidently",
+    value: "You're ready to land interviews",
+  },
+];

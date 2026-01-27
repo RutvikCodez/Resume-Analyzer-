@@ -19,3 +19,7 @@ type SolutionCardType = {
   desc: string;
   points: string[];
 };
+
+type stepCardType =  StatsItemType & {
+    step: number
+}
