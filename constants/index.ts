@@ -1,4 +1,14 @@
-import { Brain, Clock, FileText, Mic, Target, Users, Zap } from "lucide-react";
+import {
+  Award,
+  Brain,
+  Clock,
+  FileText,
+  Mic,
+  Target,
+  TrendingUp,
+  Users,
+  Zap,
+} from "lucide-react";
 
 export const stats: StatsItemType[] = [
   { value: "50K+", label: "Active Users" },
@@ -50,18 +60,67 @@ export const solution: SolutionCardType[] = [
     Icon: Mic,
     title: "AI-Powered Mock Interviews",
     desc: "Practice with realistic interviews that adapt to your role, measure your confidence, and give detailed feedback on every answer.",
-    points: ["Role-based interview questions", "Real-time feedback & improvement tips"],
+    points: [
+      "Role-based interview questions",
+      "Real-time feedback & improvement tips",
+    ],
   },
   {
     Icon: Brain,
     title: "Confidence Coaching",
     desc: "Get personalized tips on body language, tone, and answers. Watch your confidence score improve interview after interview.",
-    points: ["Clarity and confidence metrics", "Personalized improvement roadmap"],
+    points: [
+      "Clarity and confidence metrics",
+      "Personalized improvement roadmap",
+    ],
   },
   {
     Icon: Target,
     title: "Career Roadmap",
     desc: "Not just interviews—get a complete pathway to your dream role with skill gaps, learning resources, and timeline planning.",
     points: ["Skill gap analysis", "Role-specific learning paths"],
+  },
+];
+
+export const features: ProblemCardType[] = [
+  {
+    Icon: FileText,
+    title: "Resume Analyzer",
+    desc: "ATS scoring & optimization",
+  },
+  {
+    Icon: Zap,
+    title: "Resume Rewriting",
+    desc: "AI-powered resume improvement",
+  },
+  {
+    Icon: Mic,
+    title: "Mock Interviews",
+    desc: "Technical & behavioral practice",
+  },
+  {
+    Icon: Brain,
+    title: "AI Feedback",
+    desc: "Detailed interview analysis",
+  },
+  {
+    Icon: Award,
+    title: "Confidence Scoring",
+    desc: "Track your improvement",
+  },
+  {
+    Icon: Target,
+    title: "Role Practice",
+    desc: "Job-specific preparation",
+  },
+  {
+    Icon: TrendingUp,
+    title: "Real-time Suggestions",
+    desc: "Live interview tips",
+  },
+  {
+    Icon: Clock,
+    title: "Career Roadmap",
+    desc: "Your path to success",
   },
 ];
