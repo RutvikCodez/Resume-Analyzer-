@@ -153,3 +153,31 @@ export const suggestions: string[] = [
   "Quantify achievements with metrics",
   "Add 3 more industry keywords",
 ];
+
+export const metrics: StatsItemType[] = [
+  { label: "Clarity Score", value: "85%" },
+  { label: "Confidence", value: "92%" },
+];
+
+export const interviewFeatures: ProblemCardType[] = [
+  {
+    Icon: Mic,
+    title: "Voice & Video Simulations",
+    desc: "Realistic interview conditions",
+  },
+  {
+    Icon: Target,
+    title: "Role-Based Questions",
+    desc: "Behavioral & technical interviews",
+  },
+  {
+    Icon: Brain,
+    title: "Real-time AI Feedback",
+    desc: "Clarity and confidence analysis",
+  },
+  {
+    Icon: TrendingUp,
+    title: "Improvement Reports",
+    desc: "Detailed actionable insights",
+  },
+];
