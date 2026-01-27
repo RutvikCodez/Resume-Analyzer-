@@ -1,3 +1,4 @@
+import AnalyzerDeepDive from "@/components/AnalyzerDeepDive";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
@@ -9,6 +10,7 @@ const Page = () => {
     <Problem />
     <Solution />
     <Features />
+    <AnalyzerDeepDive />
   </div>;
 };
 

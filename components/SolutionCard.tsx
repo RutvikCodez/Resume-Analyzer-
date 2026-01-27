@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import PointsItem from "./PointsItem";
 
 const SolutionCard = ({
   Icon,
@@ -21,10 +21,7 @@ const SolutionCard = ({
         </div>
         <ul className="flex flex-col gap-2">
           {points.map((item, index) => (
-            <li key={index} className="flex items-start gap-2">
-              <Check className="text-primary shrink-0" />
-              <span>{item}</span>
-            </li>
+            <PointsItem key={index} item={item} />
           ))}
         </ul>
       </div>

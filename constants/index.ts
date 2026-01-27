@@ -124,3 +124,32 @@ export const features: ProblemCardType[] = [
     desc: "Your path to success",
   },
 ];
+
+export const analyzerData: ProblemCardType[] = [
+  {
+    Icon: FileText,
+    title: "ATS Parsing",
+    desc: "See exactly how ATS systems parse your resume",
+  },
+  {
+    Icon: Zap,
+    title: "Keyword Optimization",
+    desc: "Add keywords that match job descriptions",
+  },
+  {
+    Icon: Award,
+    title: "Structure Feedback",
+    desc: "Industry-specific formatting recommendations",
+  },
+  {
+    Icon: TrendingUp,
+    title: "Score Improvement",
+    desc: "Track your progress in real-time",
+  },
+];
+
+export const suggestions: string[] = [
+  "Add Python, React to skills section",
+  "Quantify achievements with metrics",
+  "Add 3 more industry keywords",
+];
