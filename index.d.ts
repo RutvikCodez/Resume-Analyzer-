@@ -4,7 +4,18 @@ type StatsItemType = {
 };
 
 type ProblemCardType = {
-  Icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
+  Icon: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
   title: string;
   desc: string;
+};
+
+type SolutionCardType = {
+  Icon: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
+  title: string;
+  desc: string;
+  points: string[];
 };
