@@ -28,3 +28,9 @@ type footerLinkType = {
   title: string
   links: string[]
 }
+
+type SecondaryWrapperType = {
+  title: string
+  desc: string
+  children: React.ReactNode
+}
