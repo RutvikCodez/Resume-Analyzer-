@@ -212,3 +212,27 @@ export const processSteps: StatsItemType[] = [
     value: "You're ready to land interviews",
   },
 ];
+
+export const usecases: ProblemCardType[] = [
+  {
+    title: "College Students",
+    desc: "Land your first job with a strong resume and interview prep",
+  },
+  {
+    title: "Fresh Graduates",
+    desc: "Transition from campus to career with confidence",
+  },
+  {
+    title: "Career Switchers",
+    desc: "Learn how to position yourself in a new field",
+  },
+  {
+    title: "Developers",
+    desc: "Master technical interviews with role-specific practice",
+  },
+  {
+    title: "MBA Candidates",
+    desc: "Ace consulting and PM interviews",
+  },
+  { title: "Professionals", desc: "Level up and land senior roles" },
+];

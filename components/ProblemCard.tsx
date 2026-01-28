@@ -7,7 +7,7 @@ const ProblemCard = ({ Icon, desc, title, ...props }: ProblemCardType) => {
       {...props}
     >
       <div className="flex flex-col gap-4">
-        <Icon className="w-8 h-8 text-primary" />
+        {Icon && <Icon className="w-8 h-8 text-primary" />}
         <h3 className="text-xl font-bold">{title}</h3>
       </div>
       <p className="text-muted-foreground">{desc}</p>

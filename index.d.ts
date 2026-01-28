@@ -4,7 +4,7 @@ type StatsItemType = {
 };
 
 type ProblemCardType = {
-  Icon: ForwardRefExoticComponent<
+  Icon?: ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
   title: string;

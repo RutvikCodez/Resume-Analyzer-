@@ -5,6 +5,7 @@ import MockInterviewPlatform from "@/components/MockInterviewPlatform";
 import Problem from "@/components/Problem";
 import Process from "@/components/Process";
 import Solution from "@/components/Solution";
+import UseCases from "@/components/UseCases";
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       <AnalyzerDeepDive />
       <MockInterviewPlatform />
       <Process />
+      <UseCases />
     </div>
   );
 };
