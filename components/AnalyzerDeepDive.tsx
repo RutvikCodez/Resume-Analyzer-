@@ -3,6 +3,9 @@ import { analyzerData, suggestions } from "@/constants";
 import PointsItem from "./PointsItem";
 import SolutionCard from "./SolutionCard";
 import SecondaryWrapper from "./SecondaryWrapper";
+import { Field, FieldLabel } from "./ui/field";
+import { Progress } from "./ui/progress";
+
 
 const AnalyzerDeepDive = () => {
   return (
@@ -20,21 +23,13 @@ const AnalyzerDeepDive = () => {
 
         <Card className="p-8 border-2 border-primary/30 bg-linear-to-br from-primary/5 to-accent/5">
           <div className=" flex flex-col gap-6">
-            <div className="bg-white rounded-lg p-4 border border-border flex flex-col gap-2">
-              <div className="flex justify-between items-center">
-                <span className="font-bold">ATS Score</span>
+            <Field className="bg-background rounded-lg p-4 border border-border flex flex-col gap-2">
+              <FieldLabel htmlFor="progress-upload" className="flex justify-between items-center">
+                <span className="font-bold">Upload progress</span>
                 <span className="text-3xl font-bold text-primary">87%</span>
-              </div>
-              <div className="w-full bg-secondary rounded-full">
-                <div
-                  className="bg-primary h-2 rounded-full"
-                  style={{ width: "87%" }}
-                />
-              </div>
-              <p className="text-xs text-muted-foreground">
-                Excellent—you&apos;re passing most ATS filters
-              </p>
-            </div>
+              </FieldLabel>
+              <Progress value={87} id="progress-upload"  className="bg-primary h-2 rounded-full" />
+            </Field>
 
             <div className=" flex flex-col gap-3">
               <h4 className="font-bold">Top Recommendations:</h4>

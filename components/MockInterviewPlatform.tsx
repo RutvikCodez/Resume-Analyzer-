@@ -16,7 +16,7 @@ const MockInterviewPlatform = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <Card className="p-8 border-2 border-accent/30 bg-linear-to-br from-accent/5 to-primary/5 order-2 md:order-1">
           <div className="flex flex-col gap-6">
-            <div className="bg-white rounded-lg p-4 border border-border flex flex-col gap-4">
+            <div className="bg-background rounded-lg p-4 border border-border flex flex-col gap-4">
               <div className=" flex flex-col gap-2">
                 <h4 className="font-bold">Current Question:</h4>
                 <p className="text-sm text-muted-foreground">
