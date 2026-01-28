@@ -6,6 +6,7 @@ import Problem from "@/components/Problem";
 import Process from "@/components/Process";
 import Solution from "@/components/Solution";
 import UseCases from "@/components/UseCases";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 const Page = () => {
   return (
@@ -18,6 +19,7 @@ const Page = () => {
       <MockInterviewPlatform />
       <Process />
       <UseCases />
+      <WhyChooseUs />
     </div>
   );
 };

@@ -6,6 +6,7 @@ const PointsItem = ({ item }: { item: string }) => {
       <Check className="text-primary shrink-0" />
       <span>{item}</span>
     </li>
+    
   );
 };
 

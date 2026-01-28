@@ -236,3 +236,31 @@ export const usecases: ProblemCardType[] = [
   },
   { title: "Professionals", desc: "Level up and land senior roles" },
 ];
+
+export const services: StatsItemType[] = [
+  {
+    label: "AI + Expert Coaching",
+    value:
+      "Not just AI—our system combines machine learning with career coaching expertise",
+  },
+  {
+    label: "ATS-Optimized",
+    value: "Your resume actually passes recruiters' automated systems",
+  },
+  {
+    label: "Real Interview Simulations",
+    value: "Practice exactly like the real thing—voice, video, timing",
+  },
+  {
+    label: "Affordable Pricing",
+    value: "Get premium features without premium price tags",
+  },
+  {
+    label: "Instant Results",
+    value: "Get actionable feedback in minutes, not days",
+  },
+  {
+    label: "No Generic Advice",
+    value: "Everything is personalized to your role, industry, and goals",
+  },
+];
