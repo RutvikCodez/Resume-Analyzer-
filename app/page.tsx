@@ -2,6 +2,7 @@ import AnalyzerDeepDive from "@/components/AnalyzerDeepDive";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import MockInterviewPlatform from "@/components/MockInterviewPlatform";
+import Platform from "@/components/Platform";
 import Problem from "@/components/Problem";
 import Process from "@/components/Process";
 import Solution from "@/components/Solution";
@@ -20,6 +21,7 @@ const Page = () => {
       <Process />
       <UseCases />
       <WhyChooseUs />
+      <Platform />
     </div>
   );
 };

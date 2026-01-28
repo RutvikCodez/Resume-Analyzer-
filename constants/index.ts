@@ -264,3 +264,21 @@ export const services: StatsItemType[] = [
     value: "Everything is personalized to your role, industry, and goals",
   },
 ];
+
+export const platformData: ProblemCardType[] = [
+  {
+    title: "Resume Dashboard",
+    desc: "Track your ATS scores, improvements, and version history",
+    Icon: FileText,
+  },
+  {
+    title: "Interview Reports",
+    desc: "Detailed feedback, video playback, and metrics from every practice session",
+    Icon: Mic,
+  },
+  {
+    title: "Skill Heatmap",
+    desc: "Visualize your strengths and gaps across technical and soft skills",
+    Icon: TrendingUp,
+  },
+];
