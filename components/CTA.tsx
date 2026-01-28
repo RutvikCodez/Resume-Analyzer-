@@ -1,5 +1,5 @@
-import { ArrowRight, Shield } from "lucide-react";
-import { Button } from "./ui/button";
+import { Shield } from "lucide-react";
+import CTAButton from "./CTAButton";
 
 const CTA = () => {
   return (
@@ -19,13 +19,7 @@ const CTA = () => {
           </div>
 
           <div className="flex justify-center">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-lg font-semibold"
-            >
-              Analyze Resume Free
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <CTAButton />
           </div>
         </div>
 

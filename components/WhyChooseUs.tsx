@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="wgrid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((item, idx) => (
             <ServicesCard key={idx} {...item} />
           ))}

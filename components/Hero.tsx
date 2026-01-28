@@ -1,6 +1,6 @@
 import { stats } from "@/constants";
-import { Button } from "./ui/button";
 import StatsItem from "./StatsItem";
+import CTAButton from "./CTAButton";
 
 const Hero = () => {
   return (
@@ -28,12 +28,7 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-lg font-semibold"
-          >
-            Analyze My Resume Free
-          </Button>
+          <CTAButton />
         </div>
 
         <div className="grid grid-cols-3 gap-4 md:gap-8 border-border">
