@@ -28,7 +28,7 @@ const AnalyzerDeepDive = () => {
                 <span className="font-bold">Upload progress</span>
                 <span className="text-3xl font-bold text-primary">87%</span>
               </FieldLabel>
-              <Progress value={87} id="progress-upload"  className="bg-primary h-2 rounded-full" />
+              <Progress value={87} id="progress-upload"   className="h-2 bg-muted [&>div]:bg-primary" />
             </Field>
 
             <div className=" flex flex-col gap-3">
