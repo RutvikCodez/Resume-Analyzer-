@@ -317,3 +317,18 @@ export const faqs: ProblemCardType[] = [
     desc: "Absolutely. No contracts, no hidden fees. Cancel your subscription anytime.",
   },
 ];
+
+export const footerSections = [
+  {
+    title: "Product",
+    links: ["Features", "Pricing", "Mobile App", "Security"],
+  },
+  {
+    title: "Company",
+    links: ["About", "Blog", "Careers", "Contact"],
+  },
+  {
+    title: "Legal",
+    links: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Support"],
+  },
+];

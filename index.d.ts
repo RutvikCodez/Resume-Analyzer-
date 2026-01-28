@@ -23,3 +23,8 @@ type SolutionCardType = {
 type stepCardType =  StatsItemType & {
     step: number
 }
+
+type footerLinkType = {
+  title: string
+  links: string[]
+}
