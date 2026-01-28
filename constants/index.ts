@@ -282,3 +282,38 @@ export const platformData: ProblemCardType[] = [
     Icon: TrendingUp,
   },
 ];
+
+export const faqs: ProblemCardType[] = [
+  {
+    title: "Is CareerForge AI free?",
+    desc: "We offer a free resume analysis and one mock interview. Unlimited access starts at just $9.99/month.",
+  },
+  {
+    title: "How accurate is the ATS score?",
+    desc: "Our ATS parser uses the same technology as leading resume screening systems. 95%+ accuracy.",
+  },
+  {
+    title: "Do I need experience to use CareerForge?",
+    desc: "No! We support everyone from fresh graduates to senior professionals with tailored guidance.",
+  },
+  {
+    title: "Is the interview feedback AI or from humans?",
+    desc: "AI-powered real-time feedback, with optional human expert review for premium members.",
+  },
+  {
+    title: "Can I download my reports?",
+    desc: "Yes! Export resumes, interview transcripts, feedback reports, and improvement plans as PDF.",
+  },
+  {
+    title: "Does this work for all job roles?",
+    desc: "Yes! Our system supports 500+ job roles across tech, finance, marketing, operations, and more.",
+  },
+  {
+    title: "Is my data secure?",
+    desc: "Enterprise-grade encryption, GDPR compliant, and zero data sharing with third parties.",
+  },
+  {
+    title: "Can I cancel anytime?",
+    desc: "Absolutely. No contracts, no hidden fees. Cancel your subscription anytime.",
+  },
+];

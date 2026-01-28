@@ -1,5 +1,6 @@
 import AnalyzerDeepDive from "@/components/AnalyzerDeepDive";
 import CTA from "@/components/CTA";
+import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import MockInterviewPlatform from "@/components/MockInterviewPlatform";
@@ -24,6 +25,7 @@ const Page = () => {
       <WhyChooseUs />
       <Platform />
       <CTA />
+      <FAQ />
     </div>
   );
 };
