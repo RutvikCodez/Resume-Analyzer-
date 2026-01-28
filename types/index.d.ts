@@ -33,4 +33,5 @@ type SecondaryWrapperType = {
   title: string
   desc: string
   children: React.ReactNode
+  color?: string
 }

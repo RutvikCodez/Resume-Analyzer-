@@ -7,6 +7,7 @@ const Platform = () => {
     <SecondaryWrapper
       title="Your Dashboard"
       desc="Everything you need in one place"
+      color="bg-secondary/30"
     >
       <div className="grid md:grid-cols-3 gap-6">
         {platformData.map((feature, idx) => (

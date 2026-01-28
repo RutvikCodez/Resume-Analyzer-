@@ -11,6 +11,7 @@ const MockInterviewPlatform = () => {
       title="Mock Interview Platform"
       desc="Practice with AI that simulates real interviews and gives you
     detailed feedback on every answer."
+      color="bg-secondary/30"
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <Card className="p-8 border-2 border-accent/30 bg-linear-to-br from-accent/5 to-primary/5 order-2 md:order-1">
