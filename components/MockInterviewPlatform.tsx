@@ -1,8 +1,8 @@
 import { Card } from "./ui/card";
 import { interviewFeatures, metrics } from "@/constants";
 import MetricsCard from "./MetricsCard";
-import AnalyzerCard from "./AnalyzerCard";
 import { Mic } from "lucide-react";
+import SolutionCard from "./SolutionCard";
 
 const MockInterviewPlatform = () => {
   return (
@@ -55,7 +55,7 @@ const MockInterviewPlatform = () => {
 
             <div className=" flex flex-col gap-4">
               {interviewFeatures.map((item, index) => (
-                <AnalyzerCard key={index} {...item} />
+                <SolutionCard key={index} {...item} />
               ))}
             </div>
           </div>

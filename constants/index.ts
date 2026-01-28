@@ -125,7 +125,7 @@ export const features: ProblemCardType[] = [
   },
 ];
 
-export const analyzerData: ProblemCardType[] = [
+export const analyzerData: SolutionCardType[] = [
   {
     Icon: FileText,
     title: "ATS Parsing",
@@ -159,7 +159,7 @@ export const metrics: StatsItemType[] = [
   { label: "Confidence", value: "92%" },
 ];
 
-export const interviewFeatures: ProblemCardType[] = [
+export const interviewFeatures: SolutionCardType[] = [
   {
     Icon: Mic,
     title: "Voice & Video Simulations",

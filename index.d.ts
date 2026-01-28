@@ -17,7 +17,7 @@ type SolutionCardType = {
   >;
   title: string;
   desc: string;
-  points: string[];
+  points?: string[];
 };
 
 type stepCardType =  StatsItemType & {

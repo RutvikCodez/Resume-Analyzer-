@@ -19,11 +19,13 @@ const SolutionCard = ({
           <h3 className="text-xl font-bold">{title}</h3>
           <p className="text-muted-foreground">{desc}</p>
         </div>
-        <ul className="flex flex-col gap-2">
-          {points.map((item, index) => (
-            <PointsItem key={index} item={item} />
-          ))}
-        </ul>
+        {points && (
+          <ul className="flex flex-col gap-2">
+            {points.map((item, index) => (
+              <PointsItem key={index} item={item} />
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { Card } from "./ui/card";
 import { analyzerData, suggestions } from "@/constants";
-import AnalyzerCard from "./AnalyzerCard";
 import PointsItem from "./PointsItem";
+import SolutionCard from "./SolutionCard";
 
 const AnalyzerDeepDive = () => {
   return (
@@ -23,7 +23,7 @@ const AnalyzerDeepDive = () => {
 
             <div className="flex flex-col gap-4">
               {analyzerData.map((item, index) => (
-                <AnalyzerCard key={index} {...item} />
+                <SolutionCard key={index} {...item} />
               ))}
             </div>
           </div>
