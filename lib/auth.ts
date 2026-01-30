@@ -14,5 +14,7 @@ export const syncUser = async () => {
         image: user.imageUrl,
       },
     });
+    return null
   }
+  return exists
 };

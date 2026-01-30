@@ -5,7 +5,8 @@ const layout = async ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  await syncUser()
+  const userExists = await syncUser()
+  if (!userExists) return
   return <div>{children}</div>;
 };
 
