@@ -1,3 +1,4 @@
+import Header from "@/components/dashboard/Header";
 import Sidebar from "@/components/dashboard/Sidebar";
 import { syncUser } from "@/lib/auth";
 
@@ -9,10 +10,13 @@ const layout = async ({
   const userExists = await syncUser();
   if (!userExists) return;
   return (
-    <main className="h-screen bg-background grid grid-cols-[1fr_4fr]">
+    <div className="h-screen bg-background grid grid-cols-[1fr_4fr]">
       <Sidebar />
+      <div className="flex-1 flex-col flex overflow-clip md:ml-0">
+      <Header />
       {children}
-    </main>
+      </div>
+    </div>
   );
 };
 
