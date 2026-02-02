@@ -3,6 +3,7 @@ import {
   Brain,
   Clock,
   FileText,
+  LayoutDashboard,
   Mic,
   Target,
   TrendingUp,
@@ -330,5 +331,33 @@ export const footerSections = [
   {
     title: "Legal",
     links: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Support"],
+  },
+];
+
+export const sidebarData: navLinksType[] = [
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: "LayoutDashboard",
+  },
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: "LayoutDashboard",
+  },
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: "LayoutDashboard",
+  },
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: "LayoutDashboard",
+  },
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: "LayoutDashboard",
   },
 ];

@@ -35,3 +35,9 @@ type SecondaryWrapperType = {
   children: React.ReactNode
   color?: string
 }
+
+type navLinksType = {
+  title: string
+  href: string
+  icon: string
+}
