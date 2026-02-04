@@ -1,6 +1,7 @@
 import Header from "@/components/dashboard/Header";
 import Sidebar from "@/components/dashboard/Sidebar";
 import { syncUser } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 const layout = async ({
   children,
@@ -8,7 +9,7 @@ const layout = async ({
   children: React.ReactNode;
 }>) => {
   const userExists = await syncUser();
-  if (!userExists) return;
+  if (!userExists) redirect("/");
   return (
     <div className="h-screen bg-background grid grid-cols-[1fr_4fr]">
       <Sidebar />

@@ -361,3 +361,75 @@ export const sidebarData: navLinksType[] = [
     icon: "LayoutDashboard",
   },
 ];
+
+export const AIResponseFormat = `
+      interface Feedback {
+      overallScore: number; //max 100
+      ATS: {
+        score: number; //rate based on ATS suitability
+        tips: {
+          type: "good" | "improve";
+          tip: string; //give 3-4 tips
+        }[];
+      };
+      toneAndStyle: {
+        score: number; //max 100
+        tips: {
+          type: "good" | "improve";
+          tip: string; //make it a short "title" for the actual explanation
+          explanation: string; //explain in detail here
+        }[]; //give 3-4 tips
+      };
+      content: {
+        score: number; //max 100
+        tips: {
+          type: "good" | "improve";
+          tip: string; //make it a short "title" for the actual explanation
+          explanation: string; //explain in detail here
+        }[]; //give 3-4 tips
+      };
+      structure: {
+        score: number; //max 100
+        tips: {
+          type: "good" | "improve";
+          tip: string; //make it a short "title" for the actual explanation
+          explanation: string; //explain in detail here
+        }[]; //give 3-4 tips
+      };
+      skills: {
+        score: number; //max 100
+        tips: {
+          type: "good" | "improve";
+          tip: string; //make it a short "title" for the actual explanation
+          explanation: string; //explain in detail here
+        }[]; //give 3-4 tips
+      };
+      experience: {
+        jobTitle: string;
+        company: string;
+        startDate: string; // YYYY-MM format
+        endDate: string;   // YYYY-MM format or "Present"
+        description: string;
+      }[];
+      education: {
+        schoolName: string;
+        educationLevel: string; // e.g., Diploma, BTech
+        startDate: string;      // YYYY-MM
+        endDate: string;        // YYYY-MM
+        cgpaOrMark?: string;    // optional
+      }[];
+    }`;
+
+export const prepareInstructions = (resumeText: string) => {
+  return `You are an expert in ATS (Applicant Tracking System) and resume analysis.
+  Please analyze and rate this resume and suggest how to improve it.
+  The rating can be low if the resume is bad.
+  Be thorough and detailed. Don't be afraid to point out any mistakes or areas for improvement.
+  If there is a lot to improve, don't hesitate to give low scores. This is to help the user to improve their resume.
+  Provide the feedback using the following format: ${AIResponseFormat}
+  Return the analysis as a JSON object, without any other text and without the backticks.
+  Do not include any other text or comments.
+  Resume:
+${resumeText}
+  `;
+};
