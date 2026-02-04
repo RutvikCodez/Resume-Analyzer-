@@ -42,31 +42,55 @@ type navLinksType = {
   icon: string;
 };
 
+type Tip = {
+  type: "good" | "improve";
+  tip: string;
+  explanation?: string;
+};
+
+type SectionBlock = {
+  score: number;
+  tips: Tip[];
+};
+
+type Experience = {
+  jobTitle: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+};
+
+type Education = {
+  schoolName: string;
+  educationLevel: string;
+  startDate: string;
+  endDate: string;
+  cgpaOrMark: string | null;
+};
+
 type AIResponse = {
   overallScore: number;
-  ATS: { score: number; tips: { type: "good" | "improve"; tip: string }[] };
-  toneAndStyle: {
-    score: number;
-    tips: { type: "good" | "improve"; tip: string }[];
-  };
-  content: { score: number; tips: { type: "good" | "improve"; tip: string }[] };
-  structure: {
-    score: number;
-    tips: { type: "good" | "improve"; tip: string }[];
-  };
-  skills: { score: number; tips: { type: "good" | "improve"; tip: string }[] };
-  experience: {
-    jobTitle: string;
-    company: string;
-    startDate: string;
-    endDate: string;
-    description: string;
-  }[];
-  education: {
-    schoolName: string;
-    educationLevel: string;
-    startDate: string;
-    endDate: string;
-    cgpaOrMark: string;
-  }[];
+  ATS: SectionBlock;
+  toneAndStyle: SectionBlock;
+  content: SectionBlock;
+  structure: SectionBlock;
+  skills: SectionBlock;
+  experience: Experience[];
+  education: Education[];
+};
+
+type ResumeAnalysis = {
+  id: string;
+  userId: string;
+  fileUrl: string;
+  fileName: string;
+  overallScore: number;
+  atsScore: number;
+  toneScore: number;
+  contentScore: number;
+  structureScore: number;
+  skillsScore: number;
+  rawAIResponse: AIResponse;
+  createdAt: string;
 };

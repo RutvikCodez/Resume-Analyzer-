@@ -3,45 +3,8 @@
 import { generateText } from "ai";
 import { google } from "@ai-sdk/google";
 import { prepareInstructions } from "@/constants";
-import { ResumeSection, TipType } from "@/app/generated/prisma/enums";
+import { ResumeSection } from "@/app/generated/prisma/enums";
 import prisma from "./prisma";
-
-type Tip = {
-  type: TipType;
-  tip: string;
-};
-
-type SectionBlock = {
-  score: number;
-  tips: Tip[];
-};
-
-type Experience = {
-  jobTitle: string;
-  company: string;
-  startDate: string;
-  endDate: string;
-  description: string;
-};
-
-type Education = {
-  schoolName: string;
-  educationLevel: string;
-  startDate: string;
-  endDate: string;
-  cgpaOrMark: string;
-};
-
-type AIResponse = {
-  overallScore: number;
-  ATS: SectionBlock;
-  toneAndStyle: SectionBlock;
-  content: SectionBlock;
-  structure: SectionBlock;
-  skills: SectionBlock;
-  experience: Experience[];
-  education: Education[];
-};
 
 export const analyzeResume = async (
   userId: string,

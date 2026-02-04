@@ -11,7 +11,17 @@ const page = async () => {
   });
   if (prismaUser?.resumes.length === 0)
     return <UploadResume userId={prismaUser.id} />;
+  const resume = await prisma.resume.findFirst({
+    where: { userId: prismaUser!.id },
+    orderBy: { createdAt: "desc" },
+  });
 
+  if (!resume) return <UploadResume userId={prismaUser!.id} />;
+
+  const typedResume = {
+    ...resume,
+    rawAIResponse: resume.rawAIResponse as AIResponse,
+  };
   return <div>page</div>;
 };
 
