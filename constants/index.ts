@@ -340,9 +340,9 @@ export const sidebarData: navLinksType[] = [
     icon: "LayoutDashboard",
   },
   {
-    title: "Dashboard",
-    href: "/dashboard",
-    icon: "LayoutDashboard",
+    title: "Resume",
+    href: "/resume",
+    icon: "FileText",
   },
   {
     title: "Dashboard",

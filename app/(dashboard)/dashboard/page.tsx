@@ -2,6 +2,7 @@ import KPICard from "@/components/dashboard/KPICard";
 import ProgressCard from "@/components/dashboard/ProgressCard";
 import SkillChart from "@/components/dashboard/SkillChart";
 import Skills from "@/components/dashboard/Skills";
+import TitleDesc from "@/components/dashboard/TitleDesc";
 import UploadResume from "@/components/dashboard/UploadResume";
 import { getDashboardData } from "@/lib/resume.actions";
 import { currentUser } from "@clerk/nextjs/server";
@@ -62,15 +63,11 @@ const page = async () => {
 
   return (
     <div className="flex flex-col gap-8 ">
-      <section className="flex flex-col gap-2">
-        <h1 className="text-4xl font-bold text-foreground">
-          Welcome back, {user?.name}
-        </h1>
-        <p className="text-muted-foreground">
-          You&apos;re on track to land your dream role. Continue building and
-          interviewing!
-        </p>
-      </section>
+      <TitleDesc
+        title={` Welcome back, ${user?.name}`}
+        desc="You're on track to land your dream role. Continue building and
+          interviewing!"
+      />
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {kpiCardsData.map((item, index) => (

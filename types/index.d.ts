@@ -117,3 +117,15 @@ type ProgressCardProps = {
   description?: string;
   className?: string;
 };
+
+type TitleDescType = {
+  title: string
+  desc?: string
+  cns?: string
+}
+
+type ResumeWrapperType = {
+  title: string
+  children: React.ReactNode
+  cns?: string
+}
