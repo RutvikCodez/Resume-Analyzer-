@@ -39,6 +39,8 @@ model Resume {
   resumeTips        ResumeTip[]
   resumeExperiences ResumeExperience[]
   resumeEducations  ResumeEducation[]
+
+  resumeSkills ResumeSkill[]
 }
 
 model ResumeTip {
@@ -84,6 +86,15 @@ model ResumeEducation {
   startDate      String?
   endDate        String?
   cgpaOrMark     String?
+
+  resume Resume @relation(fields: [resumeId], references: [id])
+}
+
+model ResumeSkill {
+  id       String @id @default(uuid())
+  resumeId String
+  name     String
+  score    Int    // 0–100
 
   resume Resume @relation(fields: [resumeId], references: [id])
 }

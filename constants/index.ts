@@ -403,6 +403,10 @@ export const AIResponseFormat = `
           explanation: string; //explain in detail here
         }[]; //give 3-4 tips
       };
+      skillProficiency: {
+        name: string;
+        percentage: number; // 0 -100
+      }[];
       experience: {
         jobTitle: string;
         company: string;
@@ -420,16 +424,47 @@ export const AIResponseFormat = `
     }`;
 
 export const prepareInstructions = (resumeText: string) => {
-  return `You are an expert in ATS (Applicant Tracking System) and resume analysis.
-  Please analyze and rate this resume and suggest how to improve it.
-  The rating can be low if the resume is bad.
-  Be thorough and detailed. Don't be afraid to point out any mistakes or areas for improvement.
-  If there is a lot to improve, don't hesitate to give low scores. This is to help the user to improve their resume.
-  Provide the feedback using the following format: ${AIResponseFormat}
-  Return the analysis as a JSON object, without any other text and without the backticks.
-  Do not include any other text or comments.
-  Resume:
+  return `
+You are an expert in ATS and resume analysis.
+
+Analyze this resume and return:
+1. Section-wise feedback
+2. Skill proficiency percentages (0 -100) for the candidate's main technical and soft skills
+
+Rules:
+- Skills must be realistic based on resume evidence
+- Include frontend + core CS + communication skills
+- Return only valid JSON in the exact format below
+
+${AIResponseFormat}
+
+Resume:
 ${resumeText}
-  `;
+`;
 };
 
+export const COLORS = [
+  "#6366F1",
+  "#22C55E",
+  "#F97316",
+  "#06B6D4",
+  "#EC4899",
+  "#84CC16",
+  "#A855F7",
+  "#F59E0B",
+  "#10B981",
+  "#3B82F6",
+  "#EF4444",
+  "#14B8A6",
+  "#8B5CF6",
+  "#F43F5E",
+  "#22D3EE",
+  "#4ADE80",
+  "#FB7185",
+  "#C084FC",
+  "#FACC15",
+  "#38BDF8",
+  "#E879F9",
+  "#34D399",
+  "#F472B6",
+];

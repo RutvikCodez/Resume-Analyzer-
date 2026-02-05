@@ -1,14 +1,14 @@
 import { Progress } from "../ui/progress";
 
-const SkillCard = ({ tip, completion, ...props }: Tip) => {
+const SkillCard = ({ name, percentage, ...props }: SkillProficiency) => {
   return (
     <div className="flex flex-col gap-2" {...props}>
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">{tip}</span>
-        <span className="text-xs text-muted-foreground">{completion}%</span>
+        <span className="text-sm font-medium">{name}</span>
+        <span className="text-xs text-muted-foreground">{percentage}%</span>
       </div>
       <Progress
-        value={completion}
+        value={percentage}
         id="progress-upload"
         className="h-2 bg-muted [&>div]:bg-primary"
       />

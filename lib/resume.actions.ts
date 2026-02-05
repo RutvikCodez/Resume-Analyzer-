@@ -89,5 +89,13 @@ export const analyzeResume = async (
     })),
   });
 
+  await prisma.resumeSkill.createMany({
+    data: data.skillProficiency.map((s) => ({
+      resumeId: resume.id,
+      name: s.name,
+      score: s.percentage,
+    })),
+  });
+
   return resume;
 };

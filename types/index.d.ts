@@ -46,7 +46,7 @@ type Tip = {
   type: "good" | "improve";
   tip: string;
   explanation?: string;
-  completion?: number
+  completion?: number;
 };
 
 type SectionBlock = {
@@ -70,6 +70,11 @@ type Education = {
   cgpaOrMark: string | null;
 };
 
+type SkillProficiency = {
+  name: string;
+  percentage: number;
+};
+
 type AIResponse = {
   overallScore: number;
   ATS: SectionBlock;
@@ -77,6 +82,7 @@ type AIResponse = {
   content: SectionBlock;
   structure: SectionBlock;
   skills: SectionBlock;
+  skillProficiency: SkillProficiency[];
   experience: Experience[];
   education: Education[];
 };

@@ -1,5 +1,6 @@
 import KPICard from "@/components/dashboard/KPICard";
 import ProgressCard from "@/components/dashboard/ProgressCard";
+import SkillChart from "@/components/dashboard/SkillChart";
 import Skills from "@/components/dashboard/Skills";
 import UploadResume from "@/components/dashboard/UploadResume";
 import prisma from "@/lib/prisma";
@@ -27,8 +28,6 @@ const page = async () => {
   };
 
   const ai = typedResume.rawAIResponse;
-  const skillsTips = typedResume.rawAIResponse.skills.tips;
-  const hello = typedResume.rawAIResponse.skills.score;
 
   const kpiCardsData: KPICardProps[] = [
     {
@@ -75,6 +74,8 @@ const page = async () => {
     },
   ];
 
+  console.log(typedResume.rawAIResponse.skillProficiency);
+
   return (
     <div className="flex flex-col gap-8">
       <section className="flex flex-col gap-2">
@@ -99,7 +100,10 @@ const page = async () => {
         ))}
       </section>
 
-      <Skills skillScore={typedResume.rawAIResponse.skills.score} skillsTips={typedResume.rawAIResponse.skills.tips} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Skills skillProficiency={typedResume.rawAIResponse.skillProficiency} />
+        <SkillChart skillProficiency={typedResume.rawAIResponse.skillProficiency} />
+      </div>
     </div>
   );
 };
