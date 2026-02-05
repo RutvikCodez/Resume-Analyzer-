@@ -101,4 +101,12 @@ type KPICardProps = {
   unit?: string;
   description?: string;
   className?: string;
-}
+};
+
+type ProgressCardProps = {
+  title: string;
+  value: number;
+  max?: number;
+  description?: string;
+  className?: string;
+};
