@@ -1,6 +1,7 @@
 import Header from "@/components/dashboard/Header";
 import Sidebar from "@/components/dashboard/Sidebar";
 import { syncUser } from "@/lib/auth";
+import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 const layout = async ({
@@ -8,8 +9,9 @@ const layout = async ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const userExists = await syncUser();
-  if (!userExists) redirect("/");
+  const user = await currentUser()
+  if (!user) redirect("/");
+  await syncUser();
   return (
     <div className="h-screen bg-background grid grid-cols-[1fr_4fr]">
       <Sidebar />

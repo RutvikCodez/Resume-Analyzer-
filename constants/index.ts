@@ -3,7 +3,6 @@ import {
   Brain,
   Clock,
   FileText,
-  LayoutDashboard,
   Mic,
   Target,
   TrendingUp,
@@ -433,3 +432,4 @@ export const prepareInstructions = (resumeText: string) => {
 ${resumeText}
   `;
 };
+

@@ -94,3 +94,11 @@ type ResumeAnalysis = {
   rawAIResponse: AIResponse;
   createdAt: string;
 };
+
+type KPICardProps = {
+  title: string;
+  value: string | number;
+  unit?: string;
+  description?: string;
+  className?: string;
+}
