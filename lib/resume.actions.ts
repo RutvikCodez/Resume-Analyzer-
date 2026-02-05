@@ -99,3 +99,13 @@ export const analyzeResume = async (
 
   return resume;
 };
+
+export async function getDashboardData(clerkId: string) {
+  const user = await prisma.user.findUnique({
+    where: { clerkId },
+    include: { resumes: { orderBy: { createdAt: "desc" }, take: 1 } },
+  });
+
+  const resume = user?.resumes[0] ?? null;
+  return { user, resume };
+}

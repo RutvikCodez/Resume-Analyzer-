@@ -3,31 +3,17 @@ import ProgressCard from "@/components/dashboard/ProgressCard";
 import SkillChart from "@/components/dashboard/SkillChart";
 import Skills from "@/components/dashboard/Skills";
 import UploadResume from "@/components/dashboard/UploadResume";
-import prisma from "@/lib/prisma";
+import { getDashboardData } from "@/lib/resume.actions";
 import { currentUser } from "@clerk/nextjs/server";
 
 const page = async () => {
-  const user = await currentUser();
-  if (!user) return;
-  const prismaUser = await prisma.user.findUnique({
-    where: { clerkId: user.id },
-    include: { resumes: true },
-  });
-  if (prismaUser?.resumes.length === 0)
-    return <UploadResume userId={prismaUser.id} />;
-  const resume = await prisma.resume.findFirst({
-    where: { userId: prismaUser!.id },
-    orderBy: { createdAt: "desc" },
-  });
+  const clerkUser = await currentUser();
+  if (!clerkUser) return null;
 
-  if (!resume) return <UploadResume userId={prismaUser!.id} />;
+  const { user, resume } = await getDashboardData(clerkUser.id);
+  if (!resume) return <UploadResume userId={user!.id} />;
 
-  const typedResume = {
-    ...resume,
-    rawAIResponse: resume.rawAIResponse as AIResponse,
-  };
-
-  const ai = typedResume.rawAIResponse;
+  const ai = resume.rawAIResponse as AIResponse;
 
   const kpiCardsData: KPICardProps[] = [
     {
@@ -74,13 +60,11 @@ const page = async () => {
     },
   ];
 
-  console.log(typedResume.rawAIResponse.skillProficiency);
-
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 ">
       <section className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold text-foreground">
-          Welcome back, {prismaUser?.name}
+          Welcome back, {user?.name}
         </h1>
         <p className="text-muted-foreground">
           You&apos;re on track to land your dream role. Continue building and
@@ -101,8 +85,8 @@ const page = async () => {
       </section>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Skills skillProficiency={typedResume.rawAIResponse.skillProficiency} />
-        <SkillChart skillProficiency={typedResume.rawAIResponse.skillProficiency} />
+        <Skills skillProficiency={ai.skillProficiency} />
+        <SkillChart skillProficiency={ai.skillProficiency} />
       </div>
     </div>
   );
