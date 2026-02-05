@@ -4,7 +4,7 @@ import NavLink from "./NavLink";
 
 const Sidebar = () => {
   return (
-    <aside className="bg-sidebar border-r border-sidebar-border transition-all duration-300 overflow-y-auto z-40">
+    <aside className="bg-sidebar border-r border-sidebar-border transition-all duration-300 h-screen z-40">
       <div className="flex flex-col h-full">
         <div className="px-6 py-6 border-b border-sidebar-border">
           <Link href="/">

@@ -1,5 +1,6 @@
 import KPICard from "@/components/dashboard/KPICard";
 import ProgressCard from "@/components/dashboard/ProgressCard";
+import Skills from "@/components/dashboard/Skills";
 import UploadResume from "@/components/dashboard/UploadResume";
 import prisma from "@/lib/prisma";
 import { currentUser } from "@clerk/nextjs/server";
@@ -26,6 +27,8 @@ const page = async () => {
   };
 
   const ai = typedResume.rawAIResponse;
+  const skillsTips = typedResume.rawAIResponse.skills.tips;
+  const hello = typedResume.rawAIResponse.skills.score;
 
   const kpiCardsData: KPICardProps[] = [
     {
@@ -74,16 +77,29 @@ const page = async () => {
 
   return (
     <div className="flex flex-col gap-8">
+      <section className="flex flex-col gap-2">
+        <h1 className="text-4xl font-bold text-foreground">
+          Welcome back, {prismaUser?.name}
+        </h1>
+        <p className="text-muted-foreground">
+          You&apos;re on track to land your dream role. Continue building and
+          interviewing!
+        </p>
+      </section>
+
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {kpiCardsData.map((item, index) => (
           <KPICard key={index} {...item} />
         ))}
       </section>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {progressCardsData.map((item, index) => (
           <ProgressCard key={index} {...item} />
         ))}
-      </div>
+      </section>
+
+      <Skills skillScore={typedResume.rawAIResponse.skills.score} skillsTips={typedResume.rawAIResponse.skills.tips} />
     </div>
   );
 };

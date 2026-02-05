@@ -46,6 +46,7 @@ type Tip = {
   type: "good" | "improve";
   tip: string;
   explanation?: string;
+  completion?: number
 };
 
 type SectionBlock = {
