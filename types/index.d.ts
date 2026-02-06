@@ -119,20 +119,31 @@ type ProgressCardProps = {
 };
 
 type TitleDescType = {
-  title: string
-  desc?: string
-  cns?: string
-}
+  title: string;
+  desc?: string;
+  cns?: string;
+};
 
 type ResumeWrapperType = {
-  title: string
-  children: React.ReactNode
-  cns?: string
-}
+  title: string;
+  children: React.ReactNode;
+  cns?: string;
+};
 
 type CategoryProps = { title: string; score: number };
 
 type ATSProps = {
   score: number;
   suggestions: Tip[];
+};
+
+type PieChartCardProps<T> = {
+  data: T[];
+  dataKey: keyof T;
+  nameKey: keyof T;
+  height?: number;
+  innerRadius?: number;
+  outerRadius?: number;
+  cornerRadius?: number;
+  paddingAngle?: number;
 };

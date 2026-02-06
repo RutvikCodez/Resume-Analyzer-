@@ -1,25 +1,20 @@
-import ScoreBadge from "./ScoreBadge";
+import { cn } from "@/lib/utils";
 
-const Category = ({ title, score, ...props }: CategoryProps) => {
-  const textColor =
-    score > 70
-      ? "text-green-600"
-      : score > 49
-        ? "text-yellow-600"
-        : "text-red-600";
-
+const Category = ({ tip, type, explanation, ...props }: Tip) => {
   return (
-    <div className="flex flex-row items-center justify-center gap-4" {...props}>
-      <div className="flex flex-row gap-2 items-center bg-primary-foreground rounded-2xl p-4 w-full justify-between">
-        <div className="flex flex-row gap-2 items-center justify-center">
-          <p className="text-2xl">{title}</p>
-          <ScoreBadge score={score} />
-        </div>
-        <p className="text-2xl">
-          <span className={textColor}>{score}</span>/100
-        </p>
-      </div>
-    </div>
+    <li className="flex items-center gap-3 rounded-md border p-2" {...props}>
+      <p className="flex-1 text-sm">{tip}</p>
+      <span
+        className={cn(
+          "text-xs px-2 py-1 rounded",
+          type === "good"
+            ? "bg-green-100 text-green-700"
+            : "bg-yellow-100 text-yellow-700",
+        )}
+      >
+        {type}
+      </span>
+    </li>
   );
 };
 
