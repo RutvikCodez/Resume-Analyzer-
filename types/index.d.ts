@@ -129,3 +129,10 @@ type ResumeWrapperType = {
   children: React.ReactNode
   cns?: string
 }
+
+type CategoryProps = { title: string; score: number };
+
+type ATSProps = {
+  score: number;
+  suggestions: Tip[];
+};

@@ -345,19 +345,9 @@ export const sidebarData: navLinksType[] = [
     icon: "FileText",
   },
   {
-    title: "Dashboard",
-    href: "/dashboard",
-    icon: "LayoutDashboard",
-  },
-  {
-    title: "Dashboard",
-    href: "/dashboard",
-    icon: "LayoutDashboard",
-  },
-  {
-    title: "Dashboard",
-    href: "/dashboard",
-    icon: "LayoutDashboard",
+    title: "Analyzer",
+    href: "/analyzer",
+    icon: "Wrench",
   },
 ];
 
