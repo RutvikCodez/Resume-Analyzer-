@@ -1,4 +1,4 @@
-import PointsItem from "./PointsItem";
+import PointsItem from "../landigPage/PointsItem";
 
 const SolutionCard = ({
   Icon,

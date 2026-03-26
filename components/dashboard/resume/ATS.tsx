@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from "../../ui/card";
 import Category from "./Category";
 
 const ATS = ({ score, suggestions, ...props }: ATSProps) => {

@@ -1,6 +1,6 @@
 import { solution } from "@/constants";
-import SolutionCard from "./SolutionCard";
-import SecondaryWrapper from "./SecondaryWrapper";
+import SolutionCard from "../reusable/SolutionCard";
+import SecondaryWrapper from "../reusable/SecondaryWrapper";
 
 const Solution = () => {
   return (

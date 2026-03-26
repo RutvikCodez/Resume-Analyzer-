@@ -1,6 +1,6 @@
 import { services } from "@/constants";
 import ServicesCard from "./ServicesCard";
-import SecondaryWrapper from "./SecondaryWrapper";
+import SecondaryWrapper from "../reusable/SecondaryWrapper";
 
 const WhyChooseUs = () => {
   return (

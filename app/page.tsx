@@ -1,16 +1,16 @@
-import AnalyzerDeepDive from "@/components/AnalyzerDeepDive";
-import CTA from "@/components/CTA";
-import FAQ from "@/components/FAQ";
-import Features from "@/components/Features";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import MockInterviewPlatform from "@/components/MockInterviewPlatform";
-import Platform from "@/components/Platform";
-import Problem from "@/components/Problem";
-import Process from "@/components/Process";
-import Solution from "@/components/Solution";
-import UseCases from "@/components/UseCases";
-import WhyChooseUs from "@/components/WhyChooseUs";
+import AnalyzerDeepDive from "@/components/landigPage/AnalyzerDeepDive";
+import CTA from "@/components/landigPage/CTA";
+import FAQ from "@/components/landigPage/FAQ";
+import Features from "@/components/landigPage/Features";
+import Footer from "@/components/landigPage/Footer";
+import Hero from "@/components/landigPage/Hero";
+import MockInterviewPlatform from "@/components/landigPage/MockInterviewPlatform";
+import Platform from "@/components/landigPage/Platform";
+import Problem from "@/components/landigPage/Problem";
+import Process from "@/components/landigPage/Process";
+import Solution from "@/components/landigPage/Solution";
+import UseCases from "@/components/landigPage/UseCases";
+import WhyChooseUs from "@/components/landigPage/WhyChooseUs";
 
 const Page = () => {
   return (

@@ -1,6 +1,6 @@
 import { processSteps } from "@/constants";
 import StepCard from "./StepCard";
-import SecondaryWrapper from "./SecondaryWrapper";
+import SecondaryWrapper from "../reusable/SecondaryWrapper";
 
 const Process = () => {
   return (

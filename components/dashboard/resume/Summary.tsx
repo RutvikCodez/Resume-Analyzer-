@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import PieChartComponent from "./PieChartComponent";
+} from "../../ui/card";
+import PieChartComponent from "../../reusable/PieChartComponent";
 
 const Summary = ({ feedback }: { feedback: AIResponse }) => {
   const categories = [

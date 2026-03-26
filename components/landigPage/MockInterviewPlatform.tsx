@@ -1,9 +1,9 @@
-import { Card } from "./ui/card";
+import { Card } from "../ui/card";
 import { interviewFeatures, metrics } from "@/constants";
 import MetricsCard from "./MetricsCard";
 import { Mic } from "lucide-react";
-import SolutionCard from "./SolutionCard";
-import SecondaryWrapper from "./SecondaryWrapper";
+import SolutionCard from "../reusable/SolutionCard";
+import SecondaryWrapper from "../reusable/SecondaryWrapper";
 
 const MockInterviewPlatform = () => {
   return (

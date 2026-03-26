@@ -1,6 +1,6 @@
 import { features } from "@/constants";
-import ProblemCard from "./ProblemCard";
-import SecondaryWrapper from "./SecondaryWrapper";
+import ProblemCard from "../reusable/ProblemCard";
+import SecondaryWrapper from "../reusable/SecondaryWrapper";
 
 const Features = () => {
   return (

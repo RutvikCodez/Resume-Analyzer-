@@ -7,9 +7,9 @@ import {
   Wrench,
 } from "lucide-react";
 
-import { NavMain } from "@/components/dashboard/nav-main";
-import { NavProjects } from "@/components/dashboard/nav-projects";
-import { NavUser } from "@/components/dashboard/nav-user";
+import { NavMain } from "@/components/dashboard/utils/nav-main";
+import { NavProjects } from "@/components/dashboard/utils/nav-projects";
+import { NavUser } from "@/components/dashboard/utils/nav-user";
 import {
   Sidebar,
   SidebarContent,

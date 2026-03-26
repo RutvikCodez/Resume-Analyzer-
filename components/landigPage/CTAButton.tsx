@@ -1,5 +1,5 @@
 import { SignedOut, SignUpButton } from "@clerk/nextjs";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 
 const CTAButton = () => {

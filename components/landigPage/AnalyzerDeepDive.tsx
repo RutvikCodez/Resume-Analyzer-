@@ -1,10 +1,11 @@
-import { Card } from "./ui/card";
+import { Card } from "../ui/card";
 import { analyzerData, suggestions } from "@/constants";
 import PointsItem from "./PointsItem";
-import SolutionCard from "./SolutionCard";
-import SecondaryWrapper from "./SecondaryWrapper";
-import { Field, FieldLabel } from "./ui/field";
-import { Progress } from "./ui/progress";
+
+import { Field, FieldLabel } from "../ui/field";
+import { Progress } from "../ui/progress";
+import SecondaryWrapper from "../reusable/SecondaryWrapper";
+import SolutionCard from "../reusable/SolutionCard";
 
 
 const AnalyzerDeepDive = () => {

@@ -1,10 +1,10 @@
-import EducationItem from "@/components/dashboard/EducationItem";
-import ExperienceItem from "@/components/dashboard/ExperienceItem";
-import InfoRow from "@/components/dashboard/InfoRow";
-import ResumeWrapper from "@/components/dashboard/ResumeWrapper";
-import SkillChip from "@/components/dashboard/SkillChip";
-import TitleDesc from "@/components/dashboard/TitleDesc";
-import UploadResume from "@/components/dashboard/UploadResume";
+import EducationItem from "@/components/dashboard/resume/EducationItem";
+import ExperienceItem from "@/components/dashboard/resume/ExperienceItem";
+import InfoRow from "@/components/dashboard/resume/InfoRow";
+import ResumeWrapper from "@/components/dashboard/resume/ResumeWrapper";
+import SkillChip from "@/components/dashboard/resume/SkillChip";
+import TitleDesc from "@/components/reusable/TitleDesc";
+import UploadResume from "@/components/dashboard/resume/UploadResume";
 import { getDashboardData } from "@/lib/resume.actions";
 import { currentUser } from "@clerk/nextjs/server";
 

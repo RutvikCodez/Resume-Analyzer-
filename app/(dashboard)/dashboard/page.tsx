@@ -1,9 +1,9 @@
-import KPICard from "@/components/dashboard/KPICard";
-import ProgressCard from "@/components/dashboard/ProgressCard";
-import SkillChart from "@/components/dashboard/SkillChart";
-import Skills from "@/components/dashboard/Skills";
-import TitleDesc from "@/components/dashboard/TitleDesc";
-import UploadResume from "@/components/dashboard/UploadResume";
+import KPICard from "@/components/dashboard/resume/KPICard";
+import ProgressCard from "@/components/dashboard/resume/ProgressCard";
+import SkillChart from "@/components/dashboard/resume/SkillChart";
+import Skills from "@/components/dashboard/resume/Skills";
+import TitleDesc from "@/components/reusable/TitleDesc";
+import UploadResume from "@/components/dashboard/resume/UploadResume";
 import { getDashboardData } from "@/lib/resume.actions";
 import { currentUser } from "@clerk/nextjs/server";
 

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
+import { Card, CardContent, CardDescription, CardHeader } from "../../ui/card";
 import { cn } from "@/lib/utils";
 
 const KPICard = ({

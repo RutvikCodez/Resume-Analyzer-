@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const Category = ({ tip, type, explanation, ...props }: Tip) => {
+const Category = ({ tip, type, ...props }: Tip) => {
   return (
     <li className="flex items-center gap-3 rounded-md border p-2" {...props}>
       <p className="flex-1 text-sm">{tip}</p>

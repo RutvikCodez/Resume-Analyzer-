@@ -1,8 +1,8 @@
-import ATS from "@/components/dashboard/ATS";
-import Summary from "@/components/dashboard/Summary";
-import TitleDesc from "@/components/dashboard/TitleDesc";
-import ToneAndStyle from "@/components/dashboard/ToneAndStyle";
-import UploadResume from "@/components/dashboard/UploadResume";
+import ATS from "@/components/dashboard/resume/ATS";
+import Summary from "@/components/dashboard/resume/Summary";
+import TitleDesc from "@/components/reusable/TitleDesc";
+import ToneAndStyle from "@/components/dashboard/resume/ToneAndStyle";
+import UploadResume from "@/components/dashboard/resume/UploadResume";
 import { getDashboardData } from "@/lib/resume.actions";
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
