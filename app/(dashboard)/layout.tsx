@@ -1,5 +1,8 @@
-import Header from "@/components/dashboard/Header";
-import Sidebar from "@/components/dashboard/Sidebar";
+import { AppSidebar } from "@/components/dashboard/app-sidebar";
+import {
+  SidebarInset,
+  SidebarProvider,
+} from "@/components/ui/sidebar";
 import { syncUser } from "@/lib/auth";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
@@ -9,21 +12,14 @@ const layout = async ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const user = await currentUser()
+  const user = await currentUser();
   if (!user) redirect("/");
   await syncUser();
   return (
-    <div className="h-screen bg-background grid grid-cols-[1fr_4fr]">
-      <Sidebar />
-      <div className="flex-1 flex-col flex overflow-clip md:ml-0 min-h-screen no-scrollbar">
-        <Header />
-        <main className="flex-1 overflow-y-auto no-scrollbar">
-          <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
-            {children}
-          </div>
-        </main>
-      </div>
-    </div>
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset className="p-5">{children}</SidebarInset>
+    </SidebarProvider>
   );
 };
 

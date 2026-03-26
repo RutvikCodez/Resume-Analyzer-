@@ -48,7 +48,7 @@ const Page = async () => {
       <Image
         src={`${resume.fileUrl}/ik-thumbnail.jpg`}
         alt="resume"
-        width={600}
+        width={660}
         height={400}
         className="bg-white rounded-md row-span-2"
       />
