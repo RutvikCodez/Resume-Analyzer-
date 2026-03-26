@@ -1,10 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 
-const ToneAndStyle = ({ score, suggestions, ...props }: ATSProps) => {
+const ToneAndStyle = ({ score, suggestions, title, ...props }: ATSProps) => {
   return (
     <Card {...props}>
       <CardHeader>
-        <CardTitle>Tone & Style</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <CardDescription>{score}/100</CardDescription>
       </CardHeader>
       <CardContent>

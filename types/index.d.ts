@@ -133,6 +133,7 @@ type ResumeWrapperType = {
 type CategoryProps = { title: string; score: number };
 
 type ATSProps = {
+  title?: string
   score: number;
   suggestions: Tip[];
 };

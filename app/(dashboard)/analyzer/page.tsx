@@ -17,18 +17,22 @@ const Page = async () => {
   const ai = resume.rawAIResponse as AIResponse;
   const sections = [
     {
+      title: "Tone & Style",
       score: ai.toneAndStyle.score,
       suggestions: ai.toneAndStyle.tips,
     },
     {
+      title: "Content",
       score: ai.content.score,
       suggestions: ai.content.tips,
     },
     {
+      title: "Structure",
       score: ai.structure.score,
       suggestions: ai.structure.tips,
     },
     {
+      title: "Skills",
       score: ai.skills.score,
       suggestions: ai.skills.tips,
     },
