@@ -9,6 +9,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import z from "zod";
 
 export const stats: StatsItemType[] = [
   { value: "50K+", label: "Active Users" },
@@ -457,4 +458,84 @@ export const COLORS = [
   "#E879F9",
   "#34D399",
   "#F472B6",
+];
+
+export const jobPreviewSections = [
+  {
+    title: "About the Company",
+    content:
+      "Cleartrip aims to simplify travel with intuitive technology and customer-first experiences. With features like EzCancel, Flexifly, and TravelSafe, the platform delivers convenience, flexibility, and innovation in the travel industry.",
+  },
+  {
+    title: "Responsibilities",
+    list: [
+      "Build responsive UIs using React and JavaScript",
+      "Collaborate with designers and backend developers",
+      "Write clean, maintainable, and testable code",
+      "Debug issues and ensure smooth user experience",
+      "Participate in code reviews and architecture decisions",
+    ],
+  },
+  {
+    title: "Required Skills",
+    list: [
+      "Strong knowledge of HTML, CSS, JavaScript",
+      "Experience with React.js",
+      "Understanding of REST APIs",
+      "Familiarity with Git",
+      "Knowledge of Redux (bonus)",
+    ],
+  },
+  {
+    title: "Eligibility",
+    content:
+      "B.Tech with at least 1+ year of experience in frontend development.",
+  },
+];
+
+export const summaryPoints = [
+  "2 Interview Rounds: Screening & Technical",
+  "Role-specific questions tailored to your skills",
+  "Balanced mix of conceptual and practical questions",
+  "Designed to simulate real interview experience",
+];
+
+export const generateInterviewFormFormSchema = z.object({
+  title: z.string().min(5),
+  location: z.string().optional(),
+  company: z.string().min(2),
+  level: z
+    .string()
+    .min(1)
+    .refine((val) => val !== "auto", {
+      message: "Auto-detection is not allowed.",
+    }),
+  description: z.string().min(5),
+});
+
+export const interviewLevels = [
+  { label: "Easy", value: "easy" },
+  { label: "Medium", value: "medium" },
+  { label: "Hard", value: "hard" },
+];
+
+export const generateInterviewFields = [
+  {
+    name: "title",
+    label: "Job Title",
+    placeholder: "Frontend Developer",
+    type: "input",
+  },
+  {
+    name: "location",
+    label: "Location (Optional)",
+    placeholder: "Bengaluru, India",
+    type: "input",
+  },
+  {
+    name: "company",
+    label: "Company",
+    placeholder: "Cleartrip",
+    type: "input",
+  },
 ];
