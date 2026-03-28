@@ -47,7 +47,7 @@ const GenerateInterviewForm = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col gap-6"
         >
-          <FieldGroup className="grid grid-cols-2 max-md:grid-cols-1">
+          <FieldGroup className="grid grid-cols-1 lg:grid-cols-2">
             {generateInterviewFields.map((item) => (
               <Controller
                 key={item.name}
@@ -97,7 +97,7 @@ const GenerateInterviewForm = () => {
               name="description"
               control={form.control}
               render={({ field, fieldState }) => (
-                <Field className="col-span-2" data-invalid={fieldState.invalid}>
+                <Field className="lg:col-span-2" data-invalid={fieldState.invalid}>
                   <FieldLabel>Job Description</FieldLabel>
                   <Textarea
                     {...field}

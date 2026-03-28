@@ -10,7 +10,7 @@ import { jobPreviewSections } from "@/constants";
 
 const JobPreview = () => {
   return (
-    <Card className="h-full row-span-2">
+    <Card className="row-span-2 h-fit">
       <CardHeader>
         <div className="flex w-full justify-between">
           <CardTitle>Frontend Developer</CardTitle>
