@@ -167,3 +167,13 @@ type AIJDResponse = {
     question: string;
   }[];
 }
+
+type Interview = {
+  id: string;
+  jobTitle: string;
+  company: string;
+  location: string | null;
+  interviewLevel: string;
+  createdAt: Date;
+  jobDescription: string;
+};

@@ -69,3 +69,10 @@ export const generateInterview = async ({
 
   return interview;
 };
+
+export const getAllInterviews = async (userId: string) => {
+  return await prisma.interview.findMany({
+    where: { userId },
+    orderBy: { createdAt: "desc" },
+  });
+}
