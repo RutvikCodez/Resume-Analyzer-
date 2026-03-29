@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -20,37 +21,40 @@ const InterviewCard = ({
   ...props
 }: Interview) => {
   return (
-    <Link href={`/interview/${id}`} className="w-full" {...props}>
-      <Card>
-        <CardHeader>
-          <div className="flex w-full justify-between">
-            <CardTitle>{jobTitle}</CardTitle>
-            <Badge variant={"destructive"} className="capitalize">
-              {interviewLevel}
-            </Badge>
-          </div>
+    <Card {...props}>
+      <CardHeader>
+        <div className="flex w-full justify-between">
+          <CardTitle>{jobTitle}</CardTitle>
+          <Badge variant={"destructive"} className="capitalize">
+            {interviewLevel}
+          </Badge>
+        </div>
 
-          <CardDescription className="flex flex-col gap-1 text-xs">
-            <span>Company: {company}</span>
-            <span>Location: {location || "Not Mentioned"}</span>
-            <span>Created: {new Date(createdAt).toLocaleDateString()}</span>
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-6 text-sm leading-relaxed">
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold">Summary</h3>
-            <ul className="list-disc pl-5 text-muted-foreground flex flex-col gap-1">
-              {jobDescription
-                .split(". ")    
-                .filter((point) => point.trim() !== "")
-                .map((point, index) => (
-                  <li key={index}>{point.trim()}.</li>
-                ))}
-            </ul>
-          </div>
-        </CardContent>
-      </Card>
-    </Link>
+        <CardDescription className="flex flex-col gap-1 text-xs">
+          <span>Company: {company}</span>
+          <span>Location: {location || "Not Mentioned"}</span>
+          <span>Created: {new Date(createdAt).toLocaleDateString()}</span>
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-6 text-sm leading-relaxed">
+        <div className="flex flex-col gap-2">
+          <h3 className="font-semibold">Summary</h3>
+          <ul className="list-disc pl-5 text-muted-foreground flex flex-col gap-1">
+            {jobDescription
+              .split(". ")
+              .filter((point) => point.trim() !== "")
+              .map((point, index) => (
+                <li key={index}>{point.trim()}.</li>
+              ))}
+          </ul>
+        </div>
+      </CardContent>
+      <CardFooter className="flex w-full justify-center items-center">
+        <Link href={`/interview/${id}`} className="w-full">
+          <Button className="w-full">Start Interview</Button>
+        </Link>
+      </CardFooter>
+    </Card>
   );
 };
 
