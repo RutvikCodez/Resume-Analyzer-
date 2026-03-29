@@ -149,3 +149,21 @@ type PieChartCardProps<T> = {
   paddingAngle?: number;
 };
 
+type AIJDResponse = {
+  jobTitle: string;
+  company: string;
+  location?: string;
+  salary?: string;
+
+  aboutJob: string;
+
+  interviewLevel: "easy" | "medium" | "hard";
+
+  screeningQuestions: {
+    question: string;
+  }[];
+
+  technicalQuestions: {
+    question: string;
+  }[];
+}

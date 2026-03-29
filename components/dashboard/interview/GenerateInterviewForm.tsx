@@ -21,24 +21,47 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { generateInterviewFields, generateInterviewFormFormSchema, interviewLevels } from "@/constants";
+import { toast } from "sonner";
+import { generateInterview } from "@/lib/interview.actions";
+import { useRouter } from "next/navigation";
 
 type FormFields = z.infer<typeof generateInterviewFormFormSchema>;
 
-const GenerateInterviewForm = () => {
+const GenerateInterviewForm = ({userId}: {userId: string}) => {
+  const router = useRouter()
   const form = useForm<z.infer<typeof generateInterviewFormFormSchema>>({
     resolver: zodResolver(generateInterviewFormFormSchema),
     defaultValues: {
       title: "",
       location: "",
       company: "",
-      level: "",
+      level: undefined,
       description: "",
     },
   });
 
-  function onSubmit(data: z.infer<typeof generateInterviewFormFormSchema>) {
-    console.log(data);
-  }
+  async function onSubmit(data: FormFields) {
+  const { company, description, level, title, location } = data;
+
+  await toast.promise(
+    generateInterview({
+      userId,
+      jobTitle: title,
+      company: company,
+      interviewLevel: level,
+      jobDescription: description,
+      location: location,
+    }),
+    {
+      loading: "Generating interview...",
+      success: () => {
+        router.push("/interview")
+        return "Interview created successfully!"
+      },
+      error: "Failed to generate interview.",
+    }
+  );
+}
 
   return (
     <Card>

@@ -504,12 +504,7 @@ export const generateInterviewFormFormSchema = z.object({
   title: z.string().min(5),
   location: z.string().optional(),
   company: z.string().min(2),
-  level: z
-    .string()
-    .min(1)
-    .refine((val) => val !== "auto", {
-      message: "Auto-detection is not allowed.",
-    }),
+  level: z.enum(["easy", "medium", "hard"]),
   description: z.string().min(5),
 });
 
@@ -539,3 +534,76 @@ export const generateInterviewFields = [
     type: "input",
   },
 ];
+
+export const AIJDResponseFormat = `
+interface JobDetails {
+  jobTitle: string;
+  company: string;
+  location?: string; // optional
+  salary?: string; // optional
+
+  aboutJob: string; // properly formatted JD summary
+
+  interviewLevel: "easy" | "medium" | "hard";
+
+  screeningQuestions: {
+    question: string;
+  }[]; // 3-5 questions based on level
+
+  technicalQuestions: {
+    question: string;
+  }[]; // 5-7 questions based on level
+}
+`;
+
+export const prepareJDInstructions = ({
+  jobTitle,
+  company,
+  interviewLevel,
+  jobDescription,
+  location,
+}: {
+  jobTitle: string;
+  company: string;
+  interviewLevel: "easy" | "medium" | "hard";
+  jobDescription: string;
+  location?: string;
+}) => {
+  return `
+You are an expert HR and technical interviewer.
+
+Your task is to:
+1. Clean and format the given job description professionally
+2. Extract key details like salary (if mentioned)
+3. Generate interview questions based on difficulty level
+
+Rules:
+- Keep output strictly in JSON format
+- Do NOT add any extra text outside JSON
+- If location is not provided, omit it
+- If salary is not mentioned, omit it
+- "aboutJob" should be a clean, structured summary (not raw JD)
+
+Interview Questions Rules:
+- EASY: basic concepts, beginner-friendly
+- MEDIUM: practical + conceptual
+- HARD: deep technical + problem-solving
+
+Question Count:
+- Screening: 3–5 questions
+- Technical: 5–7 questions
+
+Return format:
+
+${AIJDResponseFormat}
+
+User Input:
+Job Title: ${jobTitle}
+Company: ${company}
+Interview Level: ${interviewLevel}
+Location: ${location || "Not Provided"}
+
+Raw Job Description:
+${jobDescription}
+`;
+};

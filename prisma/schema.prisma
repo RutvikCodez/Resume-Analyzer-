@@ -16,6 +16,8 @@ model User {
   createdAt DateTime @default(now())
 
   resumes Resume[]
+
+  interviews Interview[]
 }
 
 model Resume {
@@ -97,4 +99,83 @@ model ResumeSkill {
   score    Int    // 0–100
 
   resume Resume @relation(fields: [resumeId], references: [id])
+}
+
+model Interview {
+  id             String   @id @default(uuid())
+  userId         String
+
+  jobTitle       String
+  company        String
+  location       String?
+  interviewLevel String  // easy, medium, hard
+
+  jobDescription String
+
+  createdAt      DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  screeningQuestions InterviewScreeningQuestion[]
+  technicalQuestions InterviewTechnicalQuestion[]
+
+  screeningFeedback InterviewScreeningFeedback?
+  technicalFeedback InterviewTechnicalFeedback?
+
+  interviewAnswers InterviewAnswer[]
+}
+
+model InterviewScreeningQuestion {
+  id          String @id @default(uuid())
+  interviewId String
+  question    String
+
+  interview Interview @relation(fields: [interviewId], references: [id])
+}
+
+model InterviewTechnicalQuestion {
+  id          String @id @default(uuid())
+  interviewId String
+  question    String
+
+  interview Interview @relation(fields: [interviewId], references: [id])
+}
+
+model InterviewScreeningFeedback {
+  id          String @id @default(uuid())
+  interviewId String @unique
+
+  score       Int
+  feedback    String
+  strengths   String[]
+  improvements String[]
+
+  createdAt   DateTime @default(now())
+
+  interview Interview @relation(fields: [interviewId], references: [id])
+}
+
+model InterviewTechnicalFeedback {
+  id          String @id @default(uuid())
+  interviewId String @unique
+
+  score       Int
+  feedback    String
+  strengths   String[]
+  improvements String[]
+
+  createdAt   DateTime @default(now())
+
+  interview Interview @relation(fields: [interviewId], references: [id])
+}
+
+model InterviewAnswer {
+  id          String @id @default(uuid())
+  interviewId String
+  questionId  String
+  answer      String
+
+  type        String // "screening" | "technical"
+
+  interview Interview @relation(fields: [interviewId], references: [id])
 }
